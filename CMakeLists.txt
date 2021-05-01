@@ -14,4 +14,7 @@ add_executable(LectureProject
         polygon.h
         polygon.cpp
         UFO.h
-        UFO.cpp)
+        UFO.cpp
+        night.h
+        totoro.h
+        totoro.cpp)

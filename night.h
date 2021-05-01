@@ -10,9 +10,9 @@
 class night
 {
 public:
-	night(vector<shared_ptr<ellipse> > inM, vector<shared_ptr<Polygon> > inS, vector<shared_ptr<Rect> > inG,
-		  vector<shared_ptr<ellipse> > inMoun, vector<shared_ptr<ellipse> > inP, vector<shared_ptr<ellipse> > inC1,
-		  vector<shared_ptr<ellipse> > inC2)
+	night(std::vector<shared_ptr<ellipse> > inM, std::vector<shared_ptr<Polygon> > inS, std::vector<shared_ptr<Rect> > inG,
+		  std::vector<shared_ptr<ellipse> > inMoun, std::vector<shared_ptr<ellipse> > inP, std::vector<shared_ptr<ellipse> > inC1,
+		  std::vector<shared_ptr<ellipse> > inC2)
 	{
 		moon = inM, stars = inS, ground = inG, mountains = inMoun, path = inP, cloud1 = inC1, cloud2 = inC2;
 	}
@@ -104,21 +104,21 @@ public:
 			return background;
 	}
 	//getter
-	vector<shared_ptr<ellipse> > getMoon() {return moon;}
-	vector<shared_ptr<Polygon> > getStars() {return stars;}
-	vector<shared_ptr<Rect> > getGround() {return ground;}
-	vector<shared_ptr<ellipse> > getMountains() {return mountains;}
-	vector<shared_ptr<ellipse> > getCloud1() {return cloud1;}
-	vector<shared_ptr<ellipse> > getCloud2() {return cloud2;}
-	vector<shared_ptr<ellipse> > getPath() {return path;}
+	std::vector<shared_ptr<ellipse> > getMoon() {return moon;}
+	std::vector<shared_ptr<Polygon> > getStars() {return stars;}
+	std::vector<shared_ptr<Rect> > getGround() {return ground;}
+	std::vector<shared_ptr<ellipse> > getMountains() {return mountains;}
+	std::vector<shared_ptr<ellipse> > getCloud1() {return cloud1;}
+	std::vector<shared_ptr<ellipse> > getCloud2() {return cloud2;}
+	std::vector<shared_ptr<ellipse> > getPath() {return path;}
 	//setter
-	void setMoon(vector<shared_ptr<ellipse> > Moon) {moon = Moon;}
-	void setStars(vector<shared_ptr<Polygon> > Stars) {stars = Stars;}
-	void setGround(vector<shared_ptr<Rect> > Ground) {ground = Ground;}
-	void setMountains(vector<shared_ptr<ellipse> > Mountains) {mountains = Mountains;}
-	void setCloud1(vector<shared_ptr<ellipse> > Cloud1) {cloud1 = Cloud1;}
-	void setCloud2(vector<shared_ptr<ellipse> > Cloud2) {cloud2 = Cloud2;}
-	void setPath(vector<shared_ptr<ellipse> > Path) {path = Path;}
+	void setMoon(std::vector<shared_ptr<ellipse> > Moon) {moon = Moon;}
+	void setStars(std::vector<shared_ptr<Polygon> > Stars) {stars = Stars;}
+	void setGround(std::vector<shared_ptr<Rect> > Ground) {ground = Ground;}
+	void setMountains(std::vector<shared_ptr<ellipse> > Mountains) {mountains = Mountains;}
+	void setCloud1(std::vector<shared_ptr<ellipse> > Cloud1) {cloud1 = Cloud1;}
+	void setCloud2(std::vector<shared_ptr<ellipse> > Cloud2) {cloud2 = Cloud2;}
+	void setPath(std::vector<shared_ptr<ellipse> > Path) {path = Path;}
 	//translater
 	night& translate(vec2 inC)
 	{
@@ -137,13 +137,13 @@ public:
 		return *this;
 	}
 private:
-	vector<shared_ptr<ellipse> > moon;
-	vector<shared_ptr<Polygon> > stars;
-	vector<shared_ptr<Rect> > ground;
-	vector<shared_ptr<ellipse> > mountains;
-	vector<shared_ptr<ellipse> > cloud1;
-	vector<shared_ptr<ellipse> > cloud2;
-	vector<shared_ptr<ellipse> > path;
+	std::vector<shared_ptr<ellipse> > moon;
+	std::vector<shared_ptr<Polygon> > stars;
+	std::vector<shared_ptr<Rect> > ground;
+	std::vector<shared_ptr<ellipse> > mountains;
+	std::vector<shared_ptr<ellipse> > cloud1;
+	std::vector<shared_ptr<ellipse> > cloud2;
+	std::vector<shared_ptr<ellipse> > path;
 };
 
 #endif
