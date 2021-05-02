@@ -91,14 +91,16 @@ void writeOut(ostream &out, ppmR &theWriter,
 				dummy = t.eval(x, y, background);
 				if(dummy == background){} else {
 					inC = dummy;
+					inTrue = true;
 				}
 			}
+
             if (inTrue) {
                 theWriter.writePixel(out, x, y, inC);
-            } else
+            } else {
                 //theWriter.writePixel(out, x, y, background);
                 theWriter.writePixel(out, x, y, scene.eval(x,y,color(12, 34, 56)));
-
+			}
         } 
         theWriter.writeNewLine(out);
     }
