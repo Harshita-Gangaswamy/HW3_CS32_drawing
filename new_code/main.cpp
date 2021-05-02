@@ -16,6 +16,7 @@
 #include "UFO.h"
 #include "night.h"
 #include "totoro.h"
+#include <string>
 
 using namespace std;
 
@@ -125,9 +126,9 @@ int main(int argc, char *argv[]) {
             color(55, 188, 51),
             color(40, 100, 40)
     };
-    theDrawings.push_back(make_shared<UFO>(vec2(150, 250), 1, 0, colors));
-    theDrawings.push_back(make_shared<UFO>(vec2(750, 400), 1, 2));
-    theDrawings.push_back(make_shared<UFO>(vec2(720, 300), 1.5, 1));
+    theDrawings.push_back(make_shared<UFO>(vec2(150, 200), 1, 0, colors));
+    theDrawings.push_back(make_shared<UFO>(vec2(750, 350), 1, 2));
+    theDrawings.push_back(make_shared<UFO>(vec2(720, 250), 1.5, 1));
 
 	//stars
 	vector<shared_ptr<Polygon> > thePolys;
@@ -279,7 +280,7 @@ int main(int argc, char *argv[]) {
         int row;
 		int col;
 		int rowLen = 4;
-		for(int i = 0; i < 8; i++){
+		for(int i = 0; i < 2; i++){
 			col = i % rowLen;
 			row = i / rowLen;
 			squad.push_back(Totoro(
